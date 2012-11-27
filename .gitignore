@@ -1,0 +1,8 @@
+*.pyc
+*.pyo
+.DS_Store
+*~
+config/local.py
+.project
+.pydevproject
+.settings
