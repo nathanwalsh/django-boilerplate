@@ -12,6 +12,7 @@ This assumes you have pip and django installed (if not, try `$ sudo easy_install
     $ cd project_name
     $ pip install -r requirements.txt
     $ python manage.py syncdb --migrate
+    $ cd config; ln -s environments/settings_production.py settings.py
 
 
 ### Settings
