@@ -25,7 +25,8 @@
         })();
     </script>
 </head>
-<body class="{% block bodyclass %}{% endblock %}" class="{% block bodyid %}{% endblock %}">
+
+<body class="{% block bodyclass %}{% endblock %}" id="{% block bodyid %}{% endblock %}">
     {% block content %}{% endblock content %}
 
     {% compress js %}
