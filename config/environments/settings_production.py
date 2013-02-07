@@ -1,6 +1,6 @@
 from settings_common import *
 
-DEBUG = True
+DEBUG = False
 
 ALLOW_ROBOTS = True
 
