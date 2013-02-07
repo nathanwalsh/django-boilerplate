@@ -2,6 +2,8 @@ from settings_common import *
 
 DEBUG = True
 
+ALLOW_ROBOTS = True
+
 DATABASES = {
     'default': {
         'ENGINE'    : 'django.db.backends.mysql',

@@ -15,6 +15,8 @@ sys.path.insert(0, PROJECT_ROOT / 'apps')
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+ALLOW_ROBOTS = False
+
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
