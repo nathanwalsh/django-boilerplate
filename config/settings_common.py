@@ -6,16 +6,15 @@ use environments/development.py or environments/production.py and import this
 file from there.
 """
 import sys
+import os
 from path import path
 from django.conf import global_settings
 
 PROJECT_ROOT = path(__file__).abspath().dirname().dirname()
-sys.path.insert(0, PROJECT_ROOT / 'apps')
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
-
-ALLOW_ROBOTS = False
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -48,7 +47,7 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-MEDIA_ROOT = PROJECT_ROOT / 'public/media'
+MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'public', 'media')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -59,7 +58,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = PROJECT_ROOT / 'public/static'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'public', 'static')
 
 # URL prefix for static files.
 # Example: "http://media.lawrence.com/static/"
@@ -70,7 +69,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    PROJECT_ROOT / 'static',
+    os.path.join(PROJECT_ROOT, 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -111,7 +110,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    PROJECT_ROOT / 'templates/',
+    os.path.join(PROJECT_ROOT, 'templates'),
 )
 
 INSTALLED_APPS = (
