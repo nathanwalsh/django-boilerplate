@@ -7,10 +7,9 @@ file from there.
 """
 import sys
 import os
-from path import path
 from django.conf import global_settings
 
-PROJECT_ROOT = path(__file__).abspath().dirname().dirname()
+PROJECT_ROOT = os.path.realpath(os.path.dirname(os.path.dirname(__file__)))
 sys.path.insert(0, os.path.join(PROJECT_ROOT, 'apps'))
 
 DEBUG = True
