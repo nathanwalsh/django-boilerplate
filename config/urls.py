@@ -10,7 +10,6 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^grappelli/', include('grappelli.urls')),
     url(r'^robots.txt$',
         lambda request: TemplateResponse(
             request,

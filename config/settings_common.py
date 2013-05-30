@@ -114,9 +114,6 @@ TEMPLATE_DIRS = (
 )
 
 INSTALLED_APPS = (
-    # 'grappelli.dashboard',
-    'grappelli',
-
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -184,9 +181,6 @@ COMPRESS_CSS_FILTERS = [
 COMPRESS_JS_FILTERS = [
     'compressor.filters.jsmin.JSMinFilter',
 ]
-
-# django-grappelli
-GRAPPELLI_ADMIN_TITLE = "{{ project_name|title }} Admin"
 
 # django-debug-toolbar
 DEBUG_TOOLBAR_CONFIG = {
