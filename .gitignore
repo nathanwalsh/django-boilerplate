@@ -2,8 +2,7 @@
 *.pyo
 .DS_Store
 *~
-config/local.py
-config/settings.py
+config/settings_local.py
 .project
 .pydevproject
 .settings
